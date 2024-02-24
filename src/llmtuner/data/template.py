@@ -530,6 +530,31 @@ _register_template(
 
 
 _register_template(
+    name="orion_mod",
+    format_user=StringFormatter(slots=["<|start|user|>\n{{content}}\n<|end|>\n<|start|assistant|>\n"]),
+    format_assistant=StringFormatter(slots=["\n{{content}}\n<|end|>\n"]),
+    format_system=StringFormatter(slots=["<start|system|>", "\n", "{{content}}", "<|end|>"]),
+    format_function=FunctionFormatter(
+        slots=["<|start|action|>", "{{name}}\n{{arguments}}", "<|end|>"]
+    ),
+    format_observation=StringFormatter(
+        slots=["<action|observation|>", "\n", "{{content}}",
+               "<|end|>",
+               "<|start|assistant|>",
+               "<|thought|start|>"]
+    ),
+    format_tools=StringFormatter(slots=["<|start|>", "{{content}}", "<|end|>"]),
+    format_separator=EmptyFormatter(slots=["\n"]),
+    default_system=(
+        "You are CrinoNovel, a novel language model trained by Stardust Revelry. \n"
+        "please though like a real novelist. use symbol \'<|thought|start|>\' at the start of your thoughts, "
+        "and \'<thought|end|>\' at the end."
+    ),
+    # stop_words=["</s>", "<|end|>", "<|action|observation|>"],
+)
+
+
+_register_template(
     name="qwen",
     format_user=StringFormatter(slots=["<|im_start|>user\n{{content}}<|im_end|>\n<|im_start|>assistant\n"]),
     format_system=StringFormatter(slots=["<|im_start|>system\n{{content}}<|im_end|>\n"]),
