@@ -435,6 +435,15 @@ _register_template(
 )
 
 
+# empty template allow user to use custom templates in prompts or datasets
+_register_template(
+    name="empty",
+    format_user=StringFormatter(slots=["{{content}}"]),
+    format_system=StringFormatter(slots=["{{content}}"]),
+    format_assistant=StringFormatter(slots=["{{content}}"]),
+)
+
+
 _register_template(
     name="falcon",
     format_user=StringFormatter(slots=["User: {{content}}\nFalcon:"]),

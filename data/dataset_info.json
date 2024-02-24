@@ -367,5 +367,26 @@
       "prompt": "content"
     },
     "folder": "python"
+  },
+  "math_qa_train": {
+    "file_name": "math_qa_train.json",
+    "columns": {
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "math_qa_test": {
+    "file_name": "math_qa_test.json",
+    "columns": {
+      "query": "input",
+      "response": "output"
+    }
+  },
+  "math_qa_challenge": {
+    "file_name": "math_qa_challenge.json",
+    "columns": {
+      "query": "input",
+      "response": "output"
+    }
   }
 }
