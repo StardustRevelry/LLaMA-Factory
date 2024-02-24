@@ -369,21 +369,21 @@
     "folder": "python"
   },
   "math_qa_train": {
-    "file_name": "mathqa_train.json",
+    "file_name": "mathqa_train.jsonl",
     "columns": {
       "query": "input",
       "response": "output"
     }
   },
   "math_qa_test": {
-    "file_name": "mathqa_test.json",
+    "file_name": "mathqa_test.jsonl",
     "columns": {
       "query": "input",
       "response": "output"
     }
   },
   "math_qa_challenge": {
-    "file_name": "mathqa_challenge.json",
+    "file_name": "mathqa_challenge.jsonl",
     "columns": {
       "query": "input",
       "response": "output"
