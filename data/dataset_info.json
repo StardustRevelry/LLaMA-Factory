@@ -371,6 +371,7 @@
   "math_qa_train": {
     "file_name": "mathqa_train.jsonl",
     "columns": {
+      "prompt": "prompt",
       "query": "input",
       "response": "output"
     }
@@ -378,6 +379,7 @@
   "math_qa_test": {
     "file_name": "mathqa_test.jsonl",
     "columns": {
+      "prompt": "prompt",
       "query": "input",
       "response": "output"
     }
@@ -385,6 +387,7 @@
   "math_qa_challenge": {
     "file_name": "mathqa_challenge.jsonl",
     "columns": {
+      "prompt": "prompt",
       "query": "input",
       "response": "output"
     }
